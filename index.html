@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Limocar | VIP Chauffeur & Airport Transfer Düsseldorf</title>
+  <meta name="description" content="Limocar offers premium VIP chauffeur and airport transfer services in Düsseldorf and across Germany for business travelers, executives, and private clients." />
+  <style>
+    :root {
+      --bg: #070707;
+      --bg-soft: #0d0d0d;
+      --card: rgba(255,255,255,0.04);
+      --card-2: rgba(255,255,255,0.03);
+      --border: rgba(255,255,255,0.08);
+      --text: #f4f4f4;
+      --muted: #b9b9b9;
+      --gold: #d4af37;
+      --gold-dark: #b89222;
+      --white: #ffffff;
+      --shadow: 0 18px 50px rgba(0,0,0,0.35);
+      --radius: 18px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7,7,7,0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 78px;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .menu a:hover {
+      color: var(--white);
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: 0.25s ease;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #111;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border-color: rgba(212,175,55,0.45);
+      color: var(--gold);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: rgba(212,175,55,0.08);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 94vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.8)),
+        url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+      padding: 70px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid rgba(212,175,55,0.35);
+      background: rgba(212,175,55,0.08);
+      color: var(--gold);
+      border-radius: 999px;
+      font-size: 0.86rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 5vw, 4.7rem);
+      line-height: 1.04;
+      margin-bottom: 18px;
+      max-width: 760px;
+    }
+
+    .hero p.lead {
+      color: #e0e0e0;
+      max-width: 700px;
+      font-size: 1.06rem;
+      margin-bottom: 28px;
+    }
+
+    .lang-note {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 22px;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .hero-points span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--white);
+      font-size: 0.9rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-card {
+      background: rgba(8,8,8,0.83);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      color: var(--gold);
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 7px;
+      color: #ececec;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: var(--white);
+      outline: none;
+    }
+
+    .form-control:focus {
+      border-color: rgba(212,175,55,0.65);
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: -55px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .trust-box {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .trust-box h4 {
+      color: var(--gold);
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .trust-box p {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 44px;
+    }
+
+    .section-head .mini {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 0.82rem;
+      margin-bottom: 12px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(212,175,55,0.28);
+    }
+
+    .icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(212,175,55,0.12);
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .fleet-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .fleet-card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: 0.25s ease;
+    }
+
+    .fleet-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .fleet-card img {
+      height: 240px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .fleet-content {
+      padding: 24px;
+    }
+
+    .fleet-content h3 {
+      margin-bottom: 10px;
+      font-size: 1.18rem;
+    }
+
+    .fleet-content p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .fleet-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .fleet-tags span {
+      font-size: 0.82rem;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.07);
+      color: #e7e7e7;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .steps {
+      display: grid;
+      gap: 18px;
+    }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .step-number {
+      min-width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(212,175,55,0.12);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .step h4 {
+      margin-bottom: 6px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .feature-panel {
+      background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
+        url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      min-height: 520px;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .quote {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px;
+    }
+
+    .quote p {
+      color: #ececec;
+      margin-bottom: 18px;
+      font-size: 0.97rem;
+    }
+
+    .quote strong {
+      color: var(--gold);
+      font-size: 0.92rem;
+    }
+
+    .cta-band {
+      background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04));
+      border: 1px solid rgba(212,175,55,0.18);
+      border-radius: 26px;
+      padding: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .cta-band h3 {
+      font-size: clamp(1.5rem, 3vw, 2.3rem);
+      margin-bottom: 10px;
+    }
+
+    .cta-band p {
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 24px;
+    }
+
+    .contact-card,
+    .contact-form {
+      background: var(--card-2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+    }
+
+    .contact-card h3,
+    .contact-form h3 {
+      margin-bottom: 12px;
+      color: var(--gold);
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .contact-item {
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      color: #ececec;
+    }
+
+    .contact-form .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    textarea.form-control {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    footer {
+      padding: 26px 0 40px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1200;
+    }
+
+    .floating-whatsapp a {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #25D366;
+      color: #fff;
+      font-size: 1.35rem;
+      box-shadow: 0 16px 34px rgba(0,0,0,0.25);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .split,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-row,
+      .grid-3,
+      .fleet-grid,
+      .testimonials {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .menu {
+        display: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .trust-row,
+      .grid-3,
+      .fleet-grid,
+      .testimonials,
+      .contact-form .row {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 72px 0;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid {
+        padding: 50px 0 70px;
+      }
+
+      .nav-actions .btn-outline {
+        display: none;
+      }
+
+      .hero-card {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container nav">
+      <div class="logo">LIMOCAR</div>
+
+      <nav class="menu">
+        <a href="#services">Services</a>
+        <a href="#fleet">Fleet</a>
+        <a href="#process">Process</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+4915233705436" class="btn btn-outline track-call" data-track="top_call">Call Now</a>
+        <a href="#contact" class="btn btn-primary track-book" data-track="top_book">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">VIP Chauffeur & Airport Transfer Düsseldorf</span>
+        <h1>Exklusive Fahrten für Business, Flughafen und VIP-Gäste.</h1>
+        <p class="lead">
+          Premium chauffeur and airport transfer service for executives, business travelers,
+          corporate clients, and private guests who expect punctuality, discretion, comfort, and professionalism.
+        </p>
+        <div class="lang-note">
+          <strong>DE:</strong> Premium Fahrservice für Düsseldorf und ganz Deutschland. <br>
+          <strong>EN:</strong> Executive mobility service in Düsseldorf and across Germany.
+        </div>
+
+        <div class="hero-points">
+          <span>Meet & Greet</span>
+          <span>Flugverfolgung / Flight Tracking</span>
+          <span>Business & VIP</span>
+          <span>Düsseldorf & Germany</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary track-book" data-track="hero_booking">Jetzt anfragen / Request Booking</a>
+          <a
+            href="https://wa.me/4915233705436?text=Hello%20Limocar%2C%20I%20would%20like%20to%20book%20a%20VIP%20chauffeur%20or%20airport%20transfer.%20Please%20contact%20me."
+            target="_blank"
+            class="btn btn-outline track-whatsapp"
+            data-track="hero_whatsapp"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Schnellanfrage / Quick Request</h3>
+        <p>Send your transfer details and receive a fast confirmation from Limocar.</p>
+
+        <form id="heroBookingForm">
+          <div class="form-group">
+            <label for="heroPickup">Abholung / Pickup</label>
+            <input id="heroPickup" class="form-control" type="text" placeholder="e.g. Düsseldorf Airport" />
+          </div>
+
+          <div class="form-group">
+            <label for="heroDestination">Ziel / Destination</label>
+            <input id="heroDestination" class="form-control" type="text" placeholder="e.g. Hotel or Messe" />
+          </div>
+
+          <div class="form-group">
+            <label for="heroDate">Datum & Zeit / Date & Time</label>
+            <input id="heroDate" class="form-control" type="datetime-local" />
+          </div>
+
+          <div class="form-group">
+            <label for="heroPassengers">Passagiere / Passengers</label>
+            <select id="heroPassengers" class="form-control">
+              <option>1 Passenger</option>
+              <option>2 Passengers</option>
+              <option>3 Passengers</option>
+              <option>4+ Passengers</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary track-form" data-track="hero_form_submit" style="width:100%;">
+            Anfrage senden / Send Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="trust-row">
+      <div class="trust-box">
+        <h4>Pünktlich / On Time</h4>
+        <p>Zuverlässige Fahrten für Flughafen, Geschäftstermine und VIP-Transfers ohne Kompromisse.</p>
+      </div>
+      <div class="trust-box">
+        <h4>Diskret / Private</h4>
+        <p>Ideal für Führungskräfte, Unternehmer, Geschäftskunden und internationale Gäste.</p>
+      </div>
+      <div class="trust-box">
+        <h4>Premium Comfort</h4>
+        <p>Komfortable Fahrzeuge und professioneller Service für eine hochwertige Kundenerfahrung.</p>
+      </div>
+      <div class="trust-box">
+        <h4>Corporate Ready</h4>
+        <p>Passend für Firmenkunden, Hotels, Events, Messen und wiederkehrende Geschäftsbuchungen.</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="mini">Unsere Leistungen / Our Services</div>
+        <h2>Executive mobility with precision and premium presentation</h2>
+        <p>
+          Limocar provides professional chauffeur solutions for airport transfer, executive travel,
+          corporate transport, and VIP guest movement in Düsseldorf and beyond.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="icon">01</div>
+          <h3>Airport Transfer</h3>
+          <p>Flughafenabholung und Transfer mit Flugüberwachung, professioneller Begrüßung und pünktlichem Service.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">02</div>
+          <h3>Business Chauffeur</h3>
+          <p>Professionelle Fahrten zu Meetings, Hotels, Messen, Events und geschäftlichen Terminen.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">03</div>
+          <h3>VIP & Corporate</h3>
+          <p>Diskrete und hochwertige Fahrdienste für Firmenkunden, wichtige Gäste und langfristige Partnerschaften.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fleet" style="background:#0b0b0b;">
+    <div class="container">
+      <div class="section-head">
+        <div class="mini">Fleet</div>
+        <h2>Selected vehicles for class, comfort, and reliability</h2>
+        <p>
+          The right vehicle reinforces the right impression. Limocar focuses on elegant, clean, and professional transport solutions.
+        </p>
+      </div>
+
+      <div class="fleet-grid">
+        <div class="fleet-card">
+          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80" alt="Executive Sedan">
+          <div class="fleet-content">
+            <h3>Executive Sedan</h3>
+            <p>Ideal for business trips, airport arrivals, premium city transfers, and executive comfort.</p>
+            <div class="fleet-tags">
+              <span>Business</span>
+              <span>Airport</span>
+              <span>Executive</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fleet-card">
+          <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80" alt="Luxury Class">
+          <div class="fleet-content">
+            <h3>Premium Comfort Class</h3>
+            <p>Elegant mobility for clients who value privacy, smooth travel, and high-standard service.</p>
+            <div class="fleet-tags">
+              <span>Comfort</span>
+              <span>VIP</span>
+              <span>Reliable</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fleet-card">
+          <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1200&q=80" alt="VIP Group Transfer">
+          <div class="fleet-content">
+            <h3>Group & VIP Transfer</h3>
+            <p>Suitable for teams, families, event guests, and airport transfers with more space and flexibility.</p>
+            <div class="fleet-tags">
+              <span>Group</span>
+              <span>Spacious</span>
+              <span>Transfer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="container split">
+      <div>
+        <div class="section-head" style="text-align:left; margin:0 0 28px;">
+          <div class="mini">Ablauf / Process</div>
+          <h2>Simple request. Fast confirmation. Premium service.</h2>
+          <p>
+            Limocar keeps the booking journey simple so your client experience stays smooth from first contact to final destination.
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div>
+              <h4>Anfrage senden / Send Request</h4>
+              <p>Teilen Sie uns Abholung, Ziel, Zeit und besondere Wünsche mit.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <div>
+              <h4>Bestätigung erhalten / Get Confirmation</h4>
+              <p>Unser Team bestätigt schnell die Verfügbarkeit und passende Lösung für Ihre Fahrt.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <div>
+              <h4>Fahrer trifft ein / Chauffeur Arrives</h4>
+              <p>Ihr Chauffeur erscheint pünktlich und professionell am vereinbarten Ort.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">4</div>
+            <div>
+              <h4>Entspannt fahren / Ride in Comfort</h4>
+              <p>Genießen Sie Komfort, Diskretion und einen professionellen Premium-Fahrservice.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-panel"></div>
+    </div>
+  </section>
+
+  <section id="testimonials" style="background:#0b0b0b;">
+    <div class="container">
+      <div class="section-head">
+        <div class="mini">Kundenstimmen / Testimonials</div>
+        <h2>Built for clients who expect reliability and class</h2>
+        <p>
+          Trust is earned through punctuality, clean communication, and a service experience that feels premium from start to finish.
+        </p>
+      </div>
+
+      <div class="testimonials">
+        <div class="quote">
+          <p>“Sehr professionell, pünktlich und diskret. Genau der Service, den man für Business-Reisen braucht.”</p>
+          <strong>— Geschäftskunde</strong>
+        </div>
+
+        <div class="quote">
+          <p>“Fast communication, smooth airport pickup, and a very polished service. Highly recommended.”</p>
+          <strong>— International Client</strong>
+        </div>
+
+        <div class="quote">
+          <p>“Reliable transfer for corporate guests and executive meetings. A strong premium impression.”</p>
+          <strong>— Corporate Partner</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h3>Jetzt Fahrt anfragen / Request your premium ride</h3>
+          <p>
+            Contact Limocar today for airport transfers, executive chauffeur bookings, and premium business mobility in Düsseldorf and Germany.
+          </p>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="#contact" class="btn btn-primary track-book" data-track="cta_booking">Booking Request</a>
+          <a
+            href="https://wa.me/4915233705436?text=Hello%20Limocar%2C%20I%20would%20like%20to%20book%20a%20VIP%20chauffeur%20or%20airport%20transfer.%20Please%20send%20me%20the%20next%20steps."
+            target="_blank"
+            class="btn btn-outline track-whatsapp"
+            data-track="cta_whatsapp"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div class="mini">Kontakt / Contact</div>
+        <h2>Send your booking request directly to Limocar</h2>
+        <p>Fill in the form below. The form opens your email app with all details ready to send.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Direct Company Details</h3>
+          <p>For quick booking, airport transfer requests, executive rides, and premium client transport.</p>
+
+          <div class="contact-list">
+            <div class="contact-item"><strong>Company:</strong> Limocar</div>
+            <div class="contact-item"><strong>Phone:</strong> <a class="track-call" data-track="contact_call" href="tel:+4915233705436">+49 1523 3705436</a></div>
+            <div class="contact-item"><strong>WhatsApp:</strong> <a class="track-whatsapp" data-track="contact_whatsapp" href="https://wa.me/4915233705436?text=Hello%20Limocar%2C%20I%20want%20to%20book%20a%20ride." target="_blank">+49 1523 3705436</a></div>
+            <div class="contact-item"><strong>Email:</strong> <a href="mailto:Support@limocar.com">Support@limocar.com</a></div>
+            <div class="contact-item"><strong>Address:</strong> Hüttenstr. 89, 40215 Düsseldorf, Deutschland</div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Booking Form</h3>
+          <form id="contactForm">
+            <div class="row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input id="name" class="form-control" type="text" placeholder="Your full name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input id="email" class="form-control" type="email" placeholder="Your email" required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group">
+                <label for="phone">Phone / WhatsApp</label>
+                <input id="phone" class="form-control" type="text" placeholder="+49 ..." required />
+              </div>
+
+              <div class="form-group">
+                <label for="service">Service Type</label>
+                <select id="service" class="form-control">
+                  <option>Airport Transfer</option>
+                  <option>Business Chauffeur</option>
+                  <option>VIP Transfer</option>
+                  <option>Corporate Booking</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group">
+                <label for="pickup">Pickup Location</label>
+                <input id="pickup" class="form-control" type="text" placeholder="Airport / hotel / address" />
+              </div>
+
+              <div class="form-group">
+                <label for="dropoff">Destination</label>
+                <input id="dropoff" class="form-control" type="text" placeholder="Destination address" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group">
+                <label for="rideDate">Date</label>
+                <input id="rideDate" class="form-control" type="date" />
+              </div>
+
+              <div class="form-group">
+                <label for="rideTime">Time</label>
+                <input id="rideTime" class="form-control" type="time" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Additional Details</label>
+              <textarea id="message" class="form-control" placeholder="Flight number, number of passengers, luggage, special requests..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary track-form" data-track="contact_form_submit" style="width:100%;">
+              Send Booking Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div>© 2026 Limocar. All rights reserved.</div>
+      <div>VIP Chauffeur · Airport Transfer · Düsseldorf · Germany</div>
+    </div>
+  </footer>
+
+  <div class="floating-whatsapp">
+    <a
+      href="https://wa.me/4915233705436?text=Hello%20Limocar%2C%20I%20would%20like%20to%20book%20a%20VIP%20chauffeur%20or%20airport%20transfer."
+      target="_blank"
+      class="track-whatsapp"
+      data-track="floating_whatsapp"
+      aria-label="WhatsApp"
+    >✆</a>
+  </div>
+
+  <script>
+    function trackEvent(action, label) {
+      console.log("Tracking:", action, label);
+
+      if (typeof gtag === "function") {
+        gtag("event", action, {
+          event_category: "engagement",
+          event_label: label
+        });
+      }
+
+      if (typeof fbq === "function") {
+        fbq("trackCustom", action, {
+          label: label
+        });
+      }
+    }
+
+    document.querySelectorAll(".track-whatsapp").forEach(function(el) {
+      el.addEventListener("click", function() {
+        trackEvent("whatsapp_click", el.dataset.track || "whatsapp");
+      });
+    });
+
+    document.querySelectorAll(".track-call").forEach(function(el) {
+      el.addEventListener("click", function() {
+        trackEvent("phone_click", el.dataset.track || "phone");
+      });
+    });
+
+    document.querySelectorAll(".track-book").forEach(function(el) {
+      el.addEventListener("click", function() {
+        trackEvent("booking_cta_click", el.dataset.track || "booking_cta");
+      });
+    });
+
+    document.querySelectorAll(".track-form").forEach(function(el) {
+      el.addEventListener("click", function() {
+        trackEvent("form_button_click", el.dataset.track || "form_button");
+      });
+    });
+
+    document.getElementById("heroBookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const pickup = document.getElementById("heroPickup").value || "";
+      const destination = document.getElementById("heroDestination").value || "";
+      const date = document.getElementById("heroDate").value || "";
+      const passengers = document.getElementById("heroPassengers").value || "";
+
+      const subject = encodeURIComponent("Quick Booking Request - Limocar");
+      const body = encodeURIComponent(
+        "Hello Limocar,\n\n" +
+        "I would like to request a booking.\n\n" +
+        "Pickup: " + pickup + "\n" +
+        "Destination: " + destination + "\n" +
+        "Date & Time: " + date + "\n" +
+        "Passengers: " + passengers + "\n\n" +
+        "Please contact me with confirmation.\n"
+      );
+
+      trackEvent("hero_form_submit", "hero_booking_form");
+      window.location.href = "mailto:Support@limocar.com?subject=" + subject + "&body=" + body;
+    });
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value || "";
+      const email = document.getElementById("email").value || "";
+      const phone = document.getElementById("phone").value || "";
+      const service = document.getElementById("service").value || "";
+      const pickup = document.getElementById("pickup").value || "";
+      const dropoff = document.getElementById("dropoff").value || "";
+      const rideDate = document.getElementById("rideDate").value || "";
+      const rideTime = document.getElementById("rideTime").value || "";
+      const message = document.getElementById("message").value || "";
+
+      const subject = encodeURIComponent("Booking Request - Limocar");
+      const body = encodeURIComponent(
+        "Hello Limocar,\n\n" +
+        "I would like to request a booking.\n\n" +
+        "Full Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Phone / WhatsApp: " + phone + "\n" +
+        "Service Type: " + service + "\n" +
+        "Pickup: " + pickup + "\n" +
+        "Destination: " + dropoff + "\n" +
+        "Date: " + rideDate + "\n" +
+        "Time: " + rideTime + "\n" +
+        "Additional Details: " + message + "\n\n" +
+        "Please contact me with confirmation.\n"
+      );
+
+      trackEvent("contact_form_submit", "main_booking_form");
+      window.location.href = "mailto:Support@limocar.com?subject=" + subject + "&body=" + body;
+    });
+  </script>
+
+</body>
+</html>
